@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let diemtoan = prompt('Nhập điểm mốn Toán:');
+    let diemly = prompt('Nhập điểm môn lý:');
+    let diemhoa = prompt('Nhậph điểm môn Hoá:');
+    let a = parseInt(diemtoan),
+        b = parseInt(diemly),
+        c = parseInt(diemhoa);
+    let tb = (a + b + c)/3;
+    let tong = tb * 3;
+
+    document.write('Điểm trung bình ba môn là:' + tb);
+    document.write('Tổng điểm ba môn là: ' + tong);
+</script>
+</body>
+</html>

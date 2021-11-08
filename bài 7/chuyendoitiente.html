@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        table {
+            width: 500px;
+        }
+
+        #result {
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+
+<form action="#">
+    <table>
+        <tr>
+            <th>
+                <label for="amount">Amount</label>
+            </th>
+            <th>
+                <label for="formcurrency">From Currency</label>
+            </th>
+            <th>
+                <label for="tocurrency">To Currency</label>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <!--                <input type="number" id="amount" size="10" oninput="nhapso()" value="">-->
+                <input type="number" id="amount">
+            </td>
+            <td>
+                <select name="formcurrency" id="formcurrency">
+                    <option value="vnd">VND</option>
+                    <option value="usd">USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="tocurrency" id="tocurrency">
+                    <option value="usd">USD</option>
+                    <option value="vnd">VND</option>
+                </select>
+            </td>
+            <td>
+<!--                <button type="button" id="display" onclick="display()">Convert</button>-->
+                <button type="button" onclick="display()">Convert</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<p id="result">Result =</p>
+<script>
+    // function nhapso() {
+    //     let a = document.getElementById("amount").value;
+    //     let b = parseInt(a);
+    //
+    //         if (document.getElementById('formcurrency').value == "vnd" && document.getElementById('tocurrency').value == "usd") {
+    //             let display = document.getElementById('display');
+    //             display.addEventListener("click", clickFunction);
+    //
+    //             function clickFunction() {
+    //                 let c = b / 23000;
+    //                 document.getElementById("result").innerHTML = "Result = " + c +" USD";
+    //             }
+    //         }
+    //
+    //         else if (document.getElementById('formcurrency').value == "usd" && document.getElementById('tocurrency').value == "vnd") {
+    //             let display = document.getElementById('display');
+    //             display.addEventListener("click", clickFunctions);
+    //
+    //             function clickFunctions() {
+    //                 let c = b * 23000;
+    //                 document.getElementById("result").innerHTML = "Result = " + c +" VND";
+    //             }
+    //         }
+    // }
+    // nhapso()
+    function display() {
+        let inputa = document.getElementById("amount").value;
+        let a = parseInt(inputa);
+
+        if (document.getElementById('formcurrency').value == "vnd" && document.getElementById('tocurrency').value == "usd") {
+
+            let c = a / 23000;
+            document.getElementById("result").innerHTML = "Result = " + c + " USD";
+        }
+        else if (document.getElementById('formcurrency').value == "usd" && document.getElementById('tocurrency').value == "vnd") {
+
+            let c = a * 23000;
+            document.getElementById("result").innerHTML = "Result = " + c + " VND";
+        }
+    }
+
+
+</script>
+</body>
+</html>
