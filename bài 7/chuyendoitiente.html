@@ -82,18 +82,19 @@
     // }
     // nhapso()
     function display() {
-        let inputa = document.getElementById("amount").value;
-        let a = parseInt(inputa);
-
-        if (document.getElementById('formcurrency').value == "vnd" && document.getElementById('tocurrency').value == "usd") {
-
-            let c = a / 23000;
-            document.getElementById("result").innerHTML = "Result = " + c + " USD";
+        let input = document.getElementById("amount").value;
+        let form = document.getElementById('formcurrency').value;
+        let to = document.getElementById('tocurrency').value;
+        if (form === "vnd" && to === "usd") {
+            let result = input / 23000;
+            document.getElementById("result").innerHTML = "Result = " + result + " USD";
         }
-        else if (document.getElementById('formcurrency').value == "usd" && document.getElementById('tocurrency').value == "vnd") {
-
-            let c = a * 23000;
-            document.getElementById("result").innerHTML = "Result = " + c + " VND";
+        else if (form === "usd" && to === "vnd") {
+            let result = input * 23000;
+            document.getElementById("result").innerHTML = "Result = " + result + " VND";
+        }
+        else {
+            document.getElementById("result").innerHTML = "Result = " + input;
         }
     }
 

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            width: 200px;
+            text-align: center;
+        }
+
+        td {
+            width: calc(100% / 4);
+        }
+
+        table, tr, td {
+            border: 1px solid #333;
+            border-collapse: collapse;
+        }
+
+        .calc {
+            width: 200px;
+            height: 50px;
+            text-align: right;
+            font-size: 20px;
+        }
+
+        .input {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <form>
+        <table>
+            <tr>
+                <td colspan="4"><label><input type="text" class="calc" id="input"></label></td>
+            </tr>
+            <tr>
+                <td><input class="input" type="button" value="1" onclick="number1()"></td>
+                <td><input class="input" type="button" value="2" onclick="number2()"></td>
+                <td><input class="input" type="button" value="3" onclick="number3()"></td>
+                <td>
+                    <button class="input" type="button" onclick="addition()">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="input" type="button" value="4" onclick="number4()"></td>
+                <td><input class="input" type="button" value="5" onclick="number5()"></td>
+                <td><input class="input" type="button" value="6" onclick="number6()"></td>
+                <td>
+                    <button class="input" type="button" onclick="subtraction()">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="input" type="button" value="7" onclick="number7()"></td>
+                <td><input class="input" type="button" value="8" onclick="number8()"></td>
+                <td><input class="input" type="button" value="9" onclick="number9()"></td>
+                <td>
+                    <button class="input" type="button" onclick="multiplication()">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td><input class="input" type="button" value="0" onclick="number0()"></td>
+                <td>
+                    <button class="input" type="reset">C</button>
+                </td>
+                <td>
+                    <button class="input" type="button" onclick="result()">=</button>
+                </td>
+                <td>
+                    <button class="input" type="button" onclick="division()">/</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+<script>
+<!--nhập số-->
+    function number1() {
+        document.getElementById('input').value += '1';
+    }
+
+    function number2() {
+        document.getElementById('input').value += '2';
+    }
+
+    function number3() {
+        document.getElementById('input').value += '3';
+    }
+
+    function number4() {
+        document.getElementById('input').value += '4';
+    }
+
+    function number5() {
+        document.getElementById('input').value += '5';
+    }
+
+    function number6() {
+        document.getElementById('input').value += '6';
+    }
+
+    function number7() {
+        document.getElementById('input').value += '7';
+    }
+
+    function number8() {
+        document.getElementById('input').value += '8';
+    }
+
+    function number9() {
+        document.getElementById('input').value += '9';
+    }
+    function number0() {
+        document.getElementById('input').value += '0';
+    }
+//nhập dấu
+function addition() {
+    document.getElementById('input').value += '+';
+}function subtraction() {
+    document.getElementById('input').value += '-';
+}function multiplication() {
+    document.getElementById('input').value += '*';
+}function division() {
+    document.getElementById('input').value += '/';
+}
+//tinh toán
+function result() {
+    document.getElementById('input').value = eval(document.getElementById('input').value);
+}
+</script>
+
+</html>
