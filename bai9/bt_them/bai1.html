@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt('Nhập số thứ nhất:');
+    let number2 = +prompt('Nhập số thứ hai:');
+    let number3 = +prompt('Nhập số thứ ba:');
+    //cách 1
+    // if (number1 === number2 && number1 === number3) {
+    //     alert('Ba số bằng nhau');
+    // }
+    // else if(number1>= number2 && number1 >= number3) {
+    //     if (number1 === number2) {
+    //         alert(`Số lớn nhất là thứ 1 và thứ 2`);
+    //     }
+    //     else {
+    //         alert(`Số lớn nhất là thứ 1 và thứ 3`);
+    //     }
+    // }
+    // else if (number2 > number3) {
+    //     if (number2 === number1) {
+    //         alert(`Số lớn nhất là thứ 1 và thứ 2`);
+    //     }
+    //     else if (number2 === number3) {
+    //         alert(`Số lớn nhất là thứ 2 và thứ 3`);
+    //     }
+    //     else {
+    //         alert(`Số lớn nhất là thứ 1 và thứ 3`);
+    //     }
+    // }
+    // else {
+    //     if (number3 === number1) {
+    //         alert(`Số lớn nhất là thứ 1 và thứ 3`);
+    //     }
+    //     else if (number3 === number2) {
+    //         alert(`Số lớn nhất là thứ 2 và thứ 3`);
+    //     }
+    //     else {
+    //         alert(`Số lớn nhất là thứ 1 và thứ 2`);
+    //     }
+    // }
+    //cách 2
+    if (number1 === number2 && number1 === number3) {
+        alert('Ba số bằng nhau');
+    }
+    else if(number1>= number2 && number1 >= number3) {
+        if (number1 === number2) {
+            alert(`Số lớn nhất là thứ 1 và thứ 2`);
+        }
+        else {
+            alert(`Số lớn nhất là thứ 1 và thứ 3`);
+        }
+    }
+    else if (number2 > number3) {
+            alert(`Số lớn nhất là thứ 1 và thứ 2`);
+    }
+    else if (number2 < number3) {
+            alert(`Số lớn nhất là thứ 1 và thứ 3`);
+    }
+    else {
+        alert(`Số lớn nhất là thứ 2 và thứ 3`);
+    }
+
+</script>
+</body>
+</html>

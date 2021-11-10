@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .body {
+            position: relative;
+            width: 300px;
+            height: 150px;
+            margin: auto;
+            text-align: center;
+            top: 50px;
+            z-index: 1;
+        }
+
+        button {
+            width: 50px;
+            padding: 4px;
+            margin: 0 5px;
+        }
+
+        .popup {
+            display: none;
+            width: 300px;
+            height: 150px;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            color: red;
+            background-color: #999;
+            border: 1px solid #333333;
+            z-index: 99999;
+        }
+
+    </style>
+</head>
+<body>
+<div class="body">
+    <h1 class="body__heading">Do you love me ???</h1>
+    <button type="button" id="yes" onclick="yes()">Yes</button>
+    <button type="button" id="nobtn" onmouseover="no()" style="position: relative; left: 0; top: 0;">No</button>
+</div>
+
+<div class="popup" id="popup">
+    <h1>Đấu kiếm không</h1>
+</div>
+</body>
+<script>
+    function yes () {
+        // document.getElementById("popup").style.display = "flex";
+        alert('Đấu kiếm không!!!');
+    }
+
+    function no() {
+        let a = Math.round(Math.random() * (window.innerHeight/2));
+        let b = Math.round(Math.random() * (window.innerWidth/2));
+        let move = document.getElementById('nobtn');
+        move.style.top = a + "px";
+        move.style.left = b + "px";
+    }
+
+</script>
+</html>

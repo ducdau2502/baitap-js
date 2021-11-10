@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let time = +prompt('Nhập số phút gọi trong tháng:');
+    let money;
+    if (time > 1000) {
+        money = (time *3000000).toFixed(2);
+        alert('tiền điện thoại tháng này: ' + money);
+    } else if (time > 500) {
+        money = time *2500000;
+        alert('tiền điện thoại tháng này: ' + money);
+    } else {
+        money = time *2000000;
+        alert('tiền điện thoại tháng này: ' + money);
+    }
+</script>
+</body>
+</html>

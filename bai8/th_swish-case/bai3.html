@@ -18,15 +18,15 @@
 
     //      viết swish/case
     let b = parseInt(prompt('Input b:'));
-    let c = b > 0;
+    let c = b > 0 ? 1 : b < 0 ? 2 : 3;
     switch (c) {
-        case true:
+        case 1:
             alert(1);
             break;
-        case false:
+        case 2:
             alert(-1);
             break
-        default:
+        case 3:
             alert(0);
 
     }
