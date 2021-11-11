@@ -28,7 +28,7 @@
         .input {
             width: 50px;
             height: 50px;
-            font-size: 20px;
+            font-size: 30px;
         }
 
     </style>
@@ -41,31 +41,31 @@
                 <td colspan="4"><label><input type="text" class="calc" id="input"></label></td>
             </tr>
             <tr>
-                <td><input class="input" name="calc" type="button" value="1" onclick="number()"></td>
-                <td><input class="input" name="calc" type="button" value="2" onclick="number()"></td>
-                <td><input class="input" type="button" value="3" onclick="number3()"></td>
+                <td><input class="input" type="button" value="1" onclick="number(value)"></td>
+                <td><input class="input" type="button" value="2" onclick="number(value)"></td>
+                <td><input class="input" type="button" value="3" onclick="number(value)"></td>
                 <td>
-                    <button class="input" type="button" onclick="addition()">+</button>
+                    <button class="input" type="button" value="+" onclick="number(value)">+</button>
                 </td>
             </tr>
             <tr>
-                <td><input class="input" type="button" value="4" onclick="number4()"></td>
-                <td><input class="input" type="button" value="5" onclick="number5()"></td>
-                <td><input class="input" type="button" value="6" onclick="number6()"></td>
+                <td><input class="input" type="button" value="4" onclick="number(value)"></td>
+                <td><input class="input" type="button" value="5" onclick="number(value)"></td>
+                <td><input class="input" type="button" value="6" onclick="number(value)"></td>
                 <td>
-                    <button class="input" type="button" onclick="subtraction()">-</button>
+                    <button class="input" type="button" value="-" onclick="number(value)">-</button>
                 </td>
             </tr>
             <tr>
-                <td><input class="input" type="button" value="7" onclick="number7()"></td>
-                <td><input class="input" type="button" value="8" onclick="number8()"></td>
-                <td><input class="input" type="button" value="9" onclick="number9()"></td>
+                <td><input class="input" type="button" value="7" onclick="number(value)"></td>
+                <td><input class="input" type="button" value="8" onclick="number(value)"></td>
+                <td><input class="input" type="button" value="9" onclick="number(value)"></td>
                 <td>
-                    <button class="input" type="button" onclick="multiplication()">*</button>
+                    <button class="input" type="button" value="*" onclick="number(value)">*</button>
                 </td>
             </tr>
             <tr>
-                <td><input class="input" type="button" value="0" onclick="number0()"></td>
+                <td><input class="input" type="button" value="0" onclick="number(value)"></td>
                 <td>
                     <button class="input" type="reset">C</button>
                 </td>
@@ -73,7 +73,7 @@
                     <button class="input" type="button" onclick="result()">=</button>
                 </td>
                 <td>
-                    <button class="input" type="button" onclick="division()">/</button>
+                    <button class="input" type="button" value="/" onclick="number(value)">/</button>
                 </td>
             </tr>
         </table>
@@ -82,57 +82,10 @@
 </body>
 <script>
 <!--nhập số-->
-    function number(r) {
-        r = document.getElementsByTagName('calc');
-        r.value = this.value
-        console.log(r)
-        document.getElementById('input').value += r;
-    }
-
-    // function number2() {
-    //     document.getElementById('input').value += '2';
-    // }
-
-    function number3() {
-        document.getElementById('input').value += '3';
-    }
-
-    function number4() {
-        document.getElementById('input').value += '4';
-    }
-
-    function number5() {
-        document.getElementById('input').value += '5';
-    }
-
-    function number6() {
-        document.getElementById('input').value += '6';
-    }
-
-    function number7() {
-        document.getElementById('input').value += '7';
-    }
-
-    function number8() {
-        document.getElementById('input').value += '8';
-    }
-
-    function number9() {
-        document.getElementById('input').value += '9';
-    }
-    function number0() {
-        document.getElementById('input').value += '0';
-    }
-//nhập dấu
-function addition() {
-    document.getElementById('input').value += '+';
-}function subtraction() {
-    document.getElementById('input').value += '-';
-}function multiplication() {
-    document.getElementById('input').value += '*';
-}function division() {
-    document.getElementById('input').value += '/';
+function number(abc) {
+    document.getElementById('input').value += abc;
 }
+
 //tinh toán
 function result() {
     document.getElementById('input').value = eval(document.getElementById('input').value);
