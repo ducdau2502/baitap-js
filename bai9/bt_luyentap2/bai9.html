@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt('Nhập số thứ nhất:');
+    let number2 = +prompt('Nhập số thứ hai:');
+    let number3 = +prompt('Nhập số thứ ba:');
+    let a = false;
+    if (number1 > 0 && number2 > 0 && number3 > 0) {
+        if (number1 + number2 > number3 &&
+            number1 + number3 > number2 &&
+            number3 + number2 > number1) {
+            a = true;
+        }
+    }
+
+    if (a) {
+        alert('3 số là cạnh của tam giác');
+    } else {
+        alert('3 số không là cạnh của tam giác');
+
+    }
+</script>
+</body>
+</html>

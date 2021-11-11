@@ -41,8 +41,8 @@
                 <td colspan="4"><label><input type="text" class="calc" id="input"></label></td>
             </tr>
             <tr>
-                <td><input class="input" type="button" value="1" onclick="number1()"></td>
-                <td><input class="input" type="button" value="2" onclick="number2()"></td>
+                <td><input class="input" name="calc" type="button" value="1" onclick="number()"></td>
+                <td><input class="input" name="calc" type="button" value="2" onclick="number()"></td>
                 <td><input class="input" type="button" value="3" onclick="number3()"></td>
                 <td>
                     <button class="input" type="button" onclick="addition()">+</button>
@@ -82,13 +82,16 @@
 </body>
 <script>
 <!--nhập số-->
-    function number1() {
-        document.getElementById('input').value += '1';
+    function number(r) {
+        r = document.getElementsByTagName('calc');
+        r.value = this.value
+        console.log(r)
+        document.getElementById('input').value += r;
     }
 
-    function number2() {
-        document.getElementById('input').value += '2';
-    }
+    // function number2() {
+    //     document.getElementById('input').value += '2';
+    // }
 
     function number3() {
         document.getElementById('input').value += '3';

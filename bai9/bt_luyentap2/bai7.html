@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt('Nhập số thứ nhất:');
+    let number2 = +prompt('Nhập số thứ hai:');
+    let number3 = +prompt('Nhập số thứ ba:');
+    let delta = (number2 * number2) - (4 * number1 * number3);
+    if(number1 === 0 ){
+        if(number2 === 0){
+            if(number3 === 0){
+                alert('PT vô số nghiệm');
+            }
+            else{
+                alert('PT vô nghiệm');
+            }
+        }
+        else {
+            let x = - (number3 / number2).toFixed(4);
+            alert(`PT có nghiệm là ${x}`);
+        }
+    }
+    else if(delta > 0) {
+        let x1 = ((- number2 + Math.sqrt(delta)) / (2 * number1)).toFixed(4);
+        let x2 = ((- number2 - Math.sqrt(delta)) / (2 * number1)).toFixed(4);
+        alert(`PT có 2 nghiệm: ${x1} và ${x2}`);
+    }
+    else if(delta === 0){
+        let x=((- number2) / (2 * number1)).toFixed(4);
+        alert(`PT có nghiệm kép ${x}`);
+    }else{
+        alert('PT vô nghiệm');
+    }
+</script>
+</body>
+</html>
