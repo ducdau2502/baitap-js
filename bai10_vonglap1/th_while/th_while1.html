@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display"></p>
+<script>
+    let number = parseInt(prompt("Nhập 1 số bất kì. Nhập -1 để kết thúc"));
+    let sum = 0;
+    while (number !== (-1)) {
+        document.getElementById('display').innerHTML += number + '</br>';
+        sum += number;
+        number = parseInt(prompt("Nhập 1 số bất kì. Nhập -1 để kết thúc"));
+    }
+    document.getElementById('display').innerHTML += 'Tổng các số đã nhập: ' + sum + '</br>';
+</script>
+</body>
+</html>

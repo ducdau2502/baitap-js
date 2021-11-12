@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+<!--    for-->
+    let scout;
+    scout = '<table border="1" width="300" cellspacing="0" cellpadding="3">';
+    for (let i = 1; i <= 10 ; i++) {
+        scout = scout + "<tr>";
+        for (let j = 1; j <= 10 ; j++) {
+            scout = scout + "<td>" + i * j + "</td>";
+        }
+        scout = scout + "</tr>";
+    }
+    scout = scout + "</table>";
+    document.write(scout);
+
+    // White
+    let scout, i, j;
+    i = j = 1;
+    scout = '<table border="1" width="300" cellspacing="0" cellpadding="3">';
+    while (i <= 10) {
+        scout = scout + '<tr>';
+        while (j <= 10) {
+            scout = scout + '<td>' + i * j + '</td>';
+            j++;
+        }
+        scout = scout + '</tr>';
+        i++;
+        j = 1;
+    }
+    scout = scout + '</table>';
+    document.write(scout)
+</script>
+</body>
+</html>

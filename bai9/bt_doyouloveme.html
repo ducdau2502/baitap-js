@@ -11,7 +11,6 @@
             margin: auto;
             text-align: center;
             top: 50px;
-            z-index: 1;
         }
 
         button {
@@ -53,8 +52,8 @@
     }
 
     function no() {
-        let a = Math.round(Math.random() * (window.innerHeight/2));
-        let b = Math.round(Math.random() * (window.innerWidth/2));
+        let a = Math.round(Math.random() * window.innerHeight - 60);
+        let b = Math.round(Math.random() * window.innerWidth - 60);
         let move = document.getElementById('nobtn');
         move.style.top = a + "px";
         move.style.left = b + "px";

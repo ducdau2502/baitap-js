@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display"></p>
+<script>
+    let number = +prompt('Nhập 1 số bất kỳ:');
+    let i;
+    let sum = 0;
+    for (i = 1; i <= number; i++) {
+        sum += i;
+    }
+    document.getElementById('display').innerHTML = 'Tổng các phần tử từ 1 đến số vừa nhập là ' + sum;
+</script>
+</body>
+</html>
