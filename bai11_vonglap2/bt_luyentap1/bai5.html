@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = +prompt('Input:')
+    let f0 = 0;
+    let f1 = 1;
+    let fn;
+    let dem = f0;
+    while (n > 0) {
+        dem = dem + f0;
+        fn = f1;
+        f1 = f1 + f0;
+        f0 = fn;
+        n--;
+    }
+    document.write('Tổng của các số fibonacci là: ' + dem);
+</script>
+</body>
+</html>

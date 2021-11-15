@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+<!--    bài 1-->
+    let sao1 = "";
+    for (let i = 1; i < 6; i++) {
+        sao1 = sao1 + "*";
+        document.write(sao1);
+        document.write("<br>");
+    }
+    document.write("<br>")
+
+    //bài 2
+    let sao2 = "";
+    let space2 = "";
+    for (let i = 0; i < 5; i++) {
+        space2 = "&nbsp" + "&nbsp";
+        for (let j = 5 - i; j > 0; j--) {
+            sao2 = "*";
+            document.write(sao2);
+
+
+        }
+        document.write(space2);
+        document.write("<br>");
+    }
+
+    //bài 3
+    document.write("<br>");
+    let sao3 = "";
+    let space3 = "";
+    for (let i = 0; i < 5; i++) {
+        for (let j = 5 - i; j > 0; j--) {
+            space3 = "&nbsp" + "&nbsp";
+            document.write(space3);
+
+        }
+        space3 = "";
+        sao3 = sao3 + "*";
+        document.write(sao3);
+        document.write("<br>");
+    }
+
+    //bài 4
+    document.write("<br>");
+    let sao4 = "";
+    let space4 = "";
+    for (let i = 0; i < 5; i++) {
+        space4 = space4 + "&nbsp" + "&nbsp";
+        document.write(space4);
+        for (let j = 5 - i; j > 0; j--) {
+            sao4 = "*";
+            document.write(sao4);
+        }
+        document.write("<br>");
+    }
+
+</script>
+</body>
+</html>

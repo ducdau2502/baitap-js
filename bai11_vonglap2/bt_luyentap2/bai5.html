@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="input1">Nhập số tiền</label><input type="number" id="input1">
+<label for="input2">Nhập số tháng</label><input type="number" id="input2">
+<label for="input3">Nhập lãi suất</label><input type="number" id="input3">
+<button type="button" onclick="result()">Tính lãi</button>
+<h2 id="display"></h2>
+<script>
+    function result() {
+        let tien = +document.getElementById('input1').value;
+        let thang = +document.getElementById('input2').value;
+        let laiSuat = +document.getElementById('input3').value;
+        let sum = tien;
+        let laiHangThang = 0;
+        for (let i = 1; i <= thang; i++) {
+            laiHangThang = +(sum * laiSuat / 100).toFixed(2);
+            sum = sum + laiHangThang;
+        }
+        document.getElementById('display').innerHTML = 'Tổng tiền: ' + sum;
+    }
+
+</script>
+</body>
+</html>

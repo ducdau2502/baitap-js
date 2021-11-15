@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let n = 1;
+  let f0 = 0;
+  let f1 = 1;
+  let fn;
+  let dem = f0;
+  while (n > 0) {
+    fn = f1;
+    f1 = f1 + f0;
+    f0 = fn;
+    if (f0 % 5 === 0) {
+      dem = f0;
+      break
+    }
+    n++;
+  }
+  document.write(dem);
+</script>
+</body>
+</html>
