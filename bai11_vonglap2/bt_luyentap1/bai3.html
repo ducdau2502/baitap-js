@@ -13,9 +13,9 @@
     let dem = f0;
     while (n > 0) {
         dem = dem + f0 + ", ";
-        fn = f1;
-        f1 = f1 + f0;
-        f0 = fn;
+        fn = f1 + f0;
+        f0 = f1;
+        f1 = fn;
         n--;
     }
         document.write(dem);

@@ -12,7 +12,7 @@
     let data = "";
     for (; count < number; ) {
         let flag = 1;
-            for (let i = 2; i < N; i++) {
+            for (let i = 2; i < Math.sqrt(N); i++) {
                 if (N % i === 0) {
                     flag = 0;
                     break;
@@ -21,10 +21,9 @@
         if (flag === 1) {
             data = data + N + ' ';
             count++;
-            N++;
-        } else {
-            N++;
         }
+        N++;
+
     }
     document.write(data)
 

@@ -12,9 +12,9 @@
   let fn;
   let dem = f0;
   while (n > 0) {
-    fn = f1;
-    f1 = f1 + f0;
-    f0 = fn;
+    fn = f1 + f0;
+    f0 = f1;
+    f1 = fn;
     if (f0 % 5 === 0) {
       dem = f0;
       break

@@ -9,13 +9,13 @@
     let n = +prompt('Input:')
     let f0 = 0;
     let f1 = 1;
-    let fn;
+    let fn = 0;
     let dem = f0;
     while (n > 0) {
         dem = dem + f0;
-        fn = f1;
-        f1 = f1 + f0;
-        f0 = fn;
+        fn = f1 + f0;
+        f0 = f1;
+        f1 = fn;
         n--;
     }
     document.write('Tổng của các số fibonacci là: ' + dem);
