@@ -6,24 +6,15 @@
 </head>
 <body>
 <script>
-    let nhietDo = prompt(" nhập vào nhiệt độ");
-    // while (nhietDo < 20 || nhietDo > 100) {
-    //     if ( nhietDo < 20) {
-    //         alert("tăng nhiệt độ lên!!!")
-    //     } else {
-    //         alert("giảm nhiệt độ đi!!!")
-    //     }
-    //     nhietDo = prompt(" nhập vào nhiệt độ");
-    // }
+    let nhietDo
     do {
+        nhietDo = prompt(" nhập vào nhiệt độ");
         if (nhietDo < 20) {
             alert("tăng nhiệt độ lên!!!")
-        } else {
+        } else if (nhietDo > 100) {
             alert("giảm nhiệt độ đi!!!")
         }
-        nhietDo = prompt(" nhập vào nhiệt độ");
     } while (nhietDo < 20 || nhietDo > 100)
-
     document.write(nhietDo)
 </script>
 </body>
