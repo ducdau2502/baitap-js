@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="input">Nhập vào 1 số dãy số</label>
+<br>
+<input id="input" type="number">
+<br>
+<button type="button" onclick="check()">Click to change</button>
+<p id="display"></p>
+
+<script>
+    function check() {
+        let num = document.getElementById('input').value;
+        let result = [num[0]];
+        for (let i = 1; i < num.length; i++) {
+            if (num[i - 1] % 2 === 0 && num[i] % 2 === 0) {
+                result.push('-', num[i]);
+            } else {
+                result.push(num[i]);
+            }
+        }
+        document.getElementById('display').innerHTML = (result.join(' '));
+    }
+
+</script>
+</body>
+</html>

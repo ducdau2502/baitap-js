@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let numbers = [-3, 2, 1, -30, 2, 40, 8, 50, 20, 30];
+  let check = numbers[0];
+  let sum = numbers[0];
+  for (let i = 1; i < numbers.length ; i++) {
+    sum = sum + numbers[i];
+    if (check < numbers[i]) {
+      check = numbers[i];
+    }
+  }
+  document.write('Giá trị lớn nhất: ' + check + '; Tổng chuỗi :'+ sum)
+
+</script>
+</body>
+</html>

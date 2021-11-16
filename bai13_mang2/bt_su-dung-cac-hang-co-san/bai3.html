@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="input">Nhập vào 1 chuỗi kí tự</label>
+<br>
+<input id="input" type="text">
+<br>
+<button type="button" onclick="check()">Click to change</button>
+<p id="display"></p>
+
+<script>
+    function check() {
+        let str = document.getElementById('input').value;
+        let upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let lowerCase = 'abcdefghijklmnopqrstuvwxyz';
+        let result = [];
+
+        // cách 1
+        for (let i = 0; i < str.length; i++) {
+            if (upperCase.indexOf(str[i]) !== -1) {
+                result.push(str[i].toLowerCase())
+            } else if (lowerCase.indexOf(str[i]) !== -1) {
+                result.push(str[i].toUpperCase())
+            } else {
+                result.push(str[i])
+            }
+        }
+
+        //cách 2
+        // for (let i = 0; i < str.length; i++) {
+        //     for (let j = 0; j < upperCase.length; j++) {
+        //         switch (str[i]) {
+        //             case upperCase[j]:
+        //                 result.push(lowerCase[j]);
+        //                 break;
+        //             case lowerCase[j]:
+        //                 result.push(upperCase[j]);
+        //                 break;
+        //         }
+        //     }
+        // }
+
+        console.log(result);
+        document.getElementById('display').innerHTML = (result.join(""));
+    }
+
+</script>
+</body>
+</html>
