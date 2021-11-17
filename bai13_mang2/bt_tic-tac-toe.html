@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let caro = new Array(6);
+    for (let i = 0; i < 6; i++) {
+        caro[i] = new Array(6);
+    }
+    for (let i = 0; i < caro.length; i++) {
+        // caro[i] = '</br>' + caro[i];
+        for (let j = 0; j < caro[i].length; j++) {
+            caro[i][j] = 0 + '&nbsp;&nbsp;';
+        }
+        caro[i] = '</br>' + caro[i].join("");
+    }
+    document.write(caro.join(""))
+</script>
+</body>
+</html>

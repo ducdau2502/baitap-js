@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = +prompt("Nhập vào số lượng phần tử trong mảng: ");
+    let array = [];
+    for (let i = 0; i < num; i++) {
+        array[i] = +prompt(`Nhập vào phần tử thứ ${i + 1} :`);
+    }
+    let input = +prompt("Nhập vào số bất kì: ");
+
+    // cách 1
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] == input) {
+            array.splice(i, 1);
+            array.push(0);
+        }
+    }
+    console.log(array)
+
+    //cách 2
+    // for (let i = 0; i < num.length; i++) {
+    //     if (num[i] == input) {
+    //         for (let j = i; j < num.length; j++) {
+    //             num[j] = num[j + 1];
+    //         };
+    //         num.pop()
+    //         num.push(0);
+    //     }
+    // }
+
+
+</script>
+</body>
+</html>

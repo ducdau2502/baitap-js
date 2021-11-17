@@ -9,27 +9,34 @@
 <br>
 <input id="input" type="text">
 <br>
-<button type="button" onclick="check()">Click to change</button>
+<button type="button" onclick="check()">Click to translate</button>
 <p id="display"></p>
 
 <script>
+    let eng = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+    let vna = ['một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bảy', 'tám', 'chín', 'mười'];
+
     function check() {
         let str = document.getElementById('input').value;
-        let eng = ['one','two','three','four','five','six','seven','eight','nine','ten'];
-        let vna = ['một','hai','ba','bốn','năm','sáu','bảy','tám','chín','mười'];
-        let result = [];
+        let flag = false;
+        let index;
         for (let i = 0; i < eng.length; i++) {
-            if (eng[i] == str) {
-                result.push(vna[i]);
+            if (eng[i] === str) {
+                flag = true;
+                index = vna[i];
                 break
-            } else if (vna[i] == str) {
-                result.push(eng[i]);
+            } if (vna[i] === str) {
+                flag = true;
+                index = eng[i];
                 break
             }
         }
-        console.log(result);
-        document.getElementById('display').innerHTML = (result.join(""));
+        if (flag) {
+            document.getElementById('display').innerHTML = index;
+        } else
+            document.getElementById('display').innerHTML = "Không tìm thấy !!!"
     }
+
 
 </script>
 </body>

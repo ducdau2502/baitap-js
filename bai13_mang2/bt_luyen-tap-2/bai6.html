@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập vào số lượng phần tử trong mảng: ");
+    let array = [];
+    for (let i = 0; i < +input; i++) {
+        array[i] = prompt(`Nhập vào phần tử thứ ${i + 1} :`);
+    }
+    let result = [];
+    for (let i = 0; i < array.length; i++) {
+        let b = []
+        for (let j = 0; j < array[i].length; j++) {
+            if (array[i][j] === "-") {
+                b.push("_")
+            } else {
+                b.push(a[i][j])
+            }
+        }
+        result.push(b.join())
+    }
+    console.log(result)
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let input = prompt("Nhập vào số lượng phần tử trong mảng: ");
+  let array = [];
+  for (let i = 0; i < +input; i++) {
+    array[i] = prompt(`Nhập vào phần tử thứ ${i + 1} :`);
+  }
+
+  console.log(array.reverse().join(""))
+
+</script>
+</body>
+</html>
