@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
 <body>
 <label for="input">Nhập vào 1 chuỗi kí tự</label>
 <br>
-<textarea name="input" id="input" cols="30" rows="10" onkeydown="check()"></textarea>
+<textarea name="input" id="input" cols="30" rows="10"></textarea>
 <br>
-<!--<button type="button" onclick="check()">Click to change</button>-->
 <p id="display"></p>
 
 <script>
-  function check() {
-    let str = document.getElementById('input').value;
-    let message = "I'm a stupid guys!!!!";
-    let result = [''];
-    let i = 0;
-    for (i; i <= str.length; i++) {
-      result.push(message[i]);
+    function check() {
+        let result = '';
+        let message = "I'm a stupid guys !!!";
+
+        let str = document.getElementById('input').value;
+        for (let i = 0; i < str.length; i++) {
+            result = result + message[i];
+            if (i === message.length) {
+                document.getElementById('input').value = '';
+                result = '';
+            }
+        }
+        document.getElementById('input').value = result;
+        setTimeout(check, 1);
     }
-    document.getElementById('input').innerHTML = result.join('');
 
-  }
-
+    check()
 </script>
 </body>
 </html>

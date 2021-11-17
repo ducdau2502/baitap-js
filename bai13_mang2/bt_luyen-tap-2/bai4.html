@@ -6,14 +6,11 @@
 </head>
 <body>
 <script>
-    let input = prompt("Nhập vào số lượng phần tử trong mảng: ");
-    let array = [];
-    for (let i = 0; i < +input; i++) {
-        array[i] = prompt(`Nhập vào phần tử thứ ${i + 1} :`);
-    }
-    let srt = array.join("");
-    // console.log(srt)
-    console.log(srt.length)
+    let srt = prompt("Nhập vào số lượng phần tử trong mảng: ");
+
+    let arr = srt.split(' ');
+    console.log(arr)
+    console.log(arr.length)
 </script>
 </body>
 </html>

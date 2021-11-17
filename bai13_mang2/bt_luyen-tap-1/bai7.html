@@ -14,24 +14,26 @@
     let input = +prompt("Nhập vào số bất kì: ");
 
     // cách 1
+    // for (let i = 0; i < array.length; i++) {
+    //     if (array[i] == input) {
+    //         array.splice(i, 1);
+    //         array.push(0);
+    //         i--;
+    //     }
+    // }
+    // console.log(array)
+
+    // cách 2
     for (let i = 0; i < array.length; i++) {
         if (array[i] == input) {
-            array.splice(i, 1);
-            array.push(0);
+            for (let j = i; j < array.length - 1; j++) {
+                array[j] = array[j + 1];
+                array[array.length - 1] = 0;
+            }
+            i--;
         }
     }
     console.log(array)
-
-    //cách 2
-    // for (let i = 0; i < num.length; i++) {
-    //     if (num[i] == input) {
-    //         for (let j = i; j < num.length; j++) {
-    //             num[j] = num[j + 1];
-    //         };
-    //         num.pop()
-    //         num.push(0);
-    //     }
-    // }
 
 
 </script>
