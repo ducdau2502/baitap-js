@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrStar = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arrStar2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    // let input = prompt("Nhập tên ngôi sao: ");
+
+    function checkStar(nameStar) {
+        nameStar = prompt("Nhập tên ngôi sao: ");
+        let flag = false;
+        let index = 0;
+        for (let i = 0; i < arrStar.length; i++) {
+            if (nameStar === arrStar[i]) {
+                 flag = true;
+                 index = i;
+                 break
+            }
+        }
+        if (flag) {
+            alert(arrStar2[index])
+        } else {
+            alert('Không tìm thấy ngôi sao nào !!!')
+        }
+    }
+
+    checkStar();
+</script>
+</body>
+</html>

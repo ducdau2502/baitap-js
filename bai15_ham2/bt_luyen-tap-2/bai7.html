@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number1 = +prompt('Nhập vào số thứ nhất');
+    let number2 = +prompt('Nhập vào số thứ hai');
+
+    function minNumber(num1, num2) {
+        let temp;
+        temp = num1;
+        num1 = num2;
+        num2 = temp;
+        document.write('số thứ nhất: ' + num1)
+        document.write('</br>')
+        document.write('số thứ hai: ' + num2)
+    }
+
+    minNumber(number1, number2);
+</script>
+</body>
+</html>

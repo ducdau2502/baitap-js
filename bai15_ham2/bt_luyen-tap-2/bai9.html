@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập vào số lượng phần tử trong mảng: ");
+    let array = [];
+    for (let i = 0; i < +input; i++) {
+        array[i] = prompt(`Nhập vào phần tử thứ ${i + 1} :`);
+    }
+    let input1 = prompt("Nhập vào số bất kì: ");
+
+    function checkInput(arr, num) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (num === arr[i]) {
+                count++
+            }
+        }
+        if (count > 0) {
+            return count
+        } else {
+            return -1
+        }
+    }
+
+    console.log(checkInput(array, input1))
+</script>
+</body>
+</html>

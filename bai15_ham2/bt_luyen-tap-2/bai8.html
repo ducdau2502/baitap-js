@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("Nhập vào số lượng phần tử trong mảng: ");
+    let array = [];
+    for (let i = 0; i < +input; i++) {
+        array[i] = prompt(`Nhập vào phần tử thứ ${i + 1} :`);
+    }
+
+    function reverseArray(arr) {
+        let fisrt = 0;
+        let last = ((arr.length) - 1);
+        while (fisrt < last) {
+            let b = arr[fisrt];
+            arr[fisrt] = arr[last];
+            arr[last] = b;
+            fisrt++;
+            last--;
+        }
+        return arr
+    }
+
+    console.log(reverseArray(array))
+</script>
+</body>
+</html>

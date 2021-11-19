@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = +prompt("Nhập vào một số bất kì")
+    function giaiThua(num) {
+            if(num == 2)
+                return 2;
+            return num * giaiThua(num - 1);
+    }
+    console.log(giaiThua(input))
+</script>
+</body>
+</html>
