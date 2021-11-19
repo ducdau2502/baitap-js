@@ -6,8 +6,6 @@
 </head>
 <body>
 <script>
-    let inputNumber = +prompt("Nhập vào 1 số: ");
-
     function isPrime(number) {
         if (number < 2) {
             return false
@@ -24,26 +22,25 @@
     let array = [];
     let i = 1;
 
-
-
+function check() {
     do {
+        inputNumber = +prompt("Nhập vào 1 số: " + 'số thứ ' + (array.length + 1));
         if (isPrime(inputNumber)) {
             array.push(inputNumber);
-            if (array.length === 5) {
-                break
-            }
-            inputNumber = +prompt("Nhập vào 1 số: " + 'số thứ ' + (array.length + 1));
         } else {
-            inputNumber = +prompt("nhập vào 1 số: " + "lần sai thứ " + (i));
+            alert("lần sai thứ " + (i));
             i++;
         }
-        if (i === 4) {
+
+        if (i === 5) {
             array = [];
-            break;
+            return array
         }
     } while (array.length < 5)
+    return array
+}
 
-    console.log(array)
+document.write(check())
 </script>
 </body>
 </html>
