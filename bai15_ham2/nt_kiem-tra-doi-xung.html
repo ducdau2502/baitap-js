@@ -6,6 +6,25 @@
 </head>
 <body>
 <script>
+    function isPalindrome() {
+        let check = true;
+        for (let i = 0; i < arr.length / 2; i++) {
+            if (arr[i] !== arr[arr.length - 1 - i]) {
+                check = false;
+                break
+            }
+        }
+        if (check) {
+            alert("is Palindrome");
+        } else {
+            alert("is not Palindrome");
+        }
+    }
+
+    let string = prompt("Nhập vào 1 từ: ");
+    let arr = string.split("");
+
+    isPalindrome(arr);
 
 </script>
 </body>
